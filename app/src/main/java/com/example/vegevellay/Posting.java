@@ -36,7 +36,6 @@ public class Posting extends AppCompatActivity {
     TextView submitTxt;
     EditText postingTitleTxt;
     EditText postingContentTxt;
-    Button chatBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,6 @@ public class Posting extends AppCompatActivity {
         setContentView(R.layout.posting);
 
         submitTxt=(TextView)findViewById(R.id.postingSubmit);
-        chatBtn=(Button)findViewById(R.id.chatBtn);
         // 앨범으로 이동하는 버튼
         postingImg = (ImageView)findViewById(R.id.postingImg);
         postingImg.setOnClickListener(new View.OnClickListener() {
@@ -66,20 +64,10 @@ public class Posting extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Board.class);
                 startActivity(intent);
-                String title=postingTitleTxt.getText().toString().trim();
-                String content=postingContentTxt.getText().toString().trim();
+//                String title=postingTitleTxt.getText().toString().trim();
+//                String content=postingContentTxt.getText().toString().trim();
             }
         });
-        chatBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Chat.class);
-                startActivity(intent);
-
-            }
-        });
-
-
     }
 
     @Override

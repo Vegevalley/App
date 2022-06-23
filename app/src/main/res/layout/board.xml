@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <RelativeLayout
         android:id="@+id/sellTitle"
         android:layout_width="match_parent"
@@ -47,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_below="@+id/sellTitle"
-        app:srcCompat="@android:drawable/dialog_holo_dark_frame" />
+        app:srcCompat="@drawable/carrot" />
 
     <RelativeLayout
         android:id="@+id/sellWho"
@@ -62,7 +63,8 @@
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:ignore="VectorDrawableCompat" />
 
         <TextView
             android:id="@+id/sellNameTxt"

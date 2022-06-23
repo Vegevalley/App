@@ -169,12 +169,7 @@
         android:orientation="horizontal"
         android:layout_below="@+id/postingContent">
 
-        <Button
-            android:id="@+id/chatBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="채팅" />
+
 
         <Button
             android:id="@+id/postingSubmit"
