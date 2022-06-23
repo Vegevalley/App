@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Posting" >
+
+    <RelativeLayout
+        android:id="@+id/tradeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#00ff00"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tradeBackImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/tradeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tradeBackImg"
+            android:text="거래해요"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tradeGpsImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="220dp"
+            android:layout_toRightOf="@+id/tradeTxt"
+            app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/postCameraLay"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/tradeTitle"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="#E8E8E8">
+
+        <ImageView
+            android:id="@+id/postingImg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_marginLeft="16dp"
+            android:text="1"
+            android:textSize="15dp"
+            android:textColor="#00ff00"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_marginLeft="25dp"
+            android:text="/10"
+            android:textSize="15dp"
+            android:textColor="#7F7F7F"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postingImgLay"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/tradeTitle"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/postCameraLay"
+        android:orientation="horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/postingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postCameraLay"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="제목"
+        android:textSize="15dp"
+        android:textColorHint="#7F7F7F"
+        android:textColor="#000000"/>
+
+
+    <EditText
+        android:id="@+id/vegKindEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postingTitle"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="야채종류"
+        android:textSize="15dp"
+        android:textColorHint="#7F7F7F"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/vegFreshEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vegKindEditTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="구입날짜"
+        android:textSize="15dp"
+        android:textColorHint="#7F7F7F"
+        android:textColor="#000000"/>
+    <EditText
+        android:id="@+id/vegSellEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vegFreshEditTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="판매여부"
+        android:textSize="15dp"
+        android:textColorHint="#7F7F7F"
+        android:textColor="#000000"/>
+    <EditText
+        android:id="@+id/postingContent"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/vegSellEditTxt"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="게시글 내용을 작성해주세요.욕설이나 비난이 담긴 목적의 글은 게시가 제한될 수 있습니다. 구매자에게 꼭 필요한 정보를 포함해주세요"
+        android:textSize="15dp"
+        android:textColorHint="#7F7F7F"
+        android:textColor="#000000"
+       />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/postingContent">
+
+        <Button
+            android:id="@+id/chatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="채팅" />
+
+        <Button
+            android:id="@+id/postingSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="등록" />
+    </LinearLayout>
+
+</RelativeLayout>
