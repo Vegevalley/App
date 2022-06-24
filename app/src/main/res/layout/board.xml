@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:id="@+id/sellTitle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#00ff00"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sellBackImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <ImageView
+            android:id="@+id/sellShareImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="300dp"
+            android:layout_toRightOf="@+id/tradeTxt"
+            app:srcCompat="@android:drawable/ic_menu_share" />
+
+        <ImageView
+            android:id="@+id/sellSearchImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/sellShareImg"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/sellImg"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/sellTitle"
+        app:srcCompat="@drawable/carrot" />
+
+    <RelativeLayout
+        android:id="@+id/sellWho"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#00ff00"
+        android:layout_below="@+id/sellImg">
+
+        <ImageView
+            android:id="@+id/sellProfImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/sellNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sellProfImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="하루"
+            android:textColor="#ffffff"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/sellAddrTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sellProfImg"
+            android:layout_below="@+id/sellNameTxt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:text="남산"
+            android:textSize="12dp"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/sellContentView"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:layout_below="@+id/sellWho">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sellTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                tools:ignore="DuplicateIds" />
+
+
+            <TextView
+                android:id="@+id/vegKindTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/postingTitle"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textSize="15dp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/vegFreshTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vegKindTxt"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textSize="15dp"
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/vegSellTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vegFreshTxt"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textSize="15dp"
+                android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/sellContentTxt"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/vegSellTxt"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/boardCommentLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/sellContentView">
+
+
+
+        <Button
+            android:id="@+id/sellChatBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채팅하기" />
+    </LinearLayout>
+
+</RelativeLayout>
