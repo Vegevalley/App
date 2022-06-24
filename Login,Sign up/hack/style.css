@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#bottom_bar {
+    position:fixed;
+    top:539px;
+    width:380px;
+    height:37px;
+}
+
+#top_bar {
+    top:0px;
+    width:380px;
+    height:37px;
+}
+#top_bar #img_1 {
+    float: left;
+    width:330px;
+}
+#top_bar #img_2, #search_fillter {
+    display: inline-block;
+    width:50px;
+    height: 46px;
+    border:none;
+}
+
+#filltering {
+    margin-left:50px;
+    margin-bottom:5px;
+}
+#fillter_text {
+    width:90px;
+    border-width:2px;
+}
+#btn_fillter {
+    font-weight: bold;
+    font-size:11px;
+    border-width:2px;
+}
+
+.board_list_wrap {
+    width: 380px;
+    height: 580px;
+    background-color: white;
+    border: 2px solid pink;
+}
+.col {
+    font-family: "고딕";
+    font-size: 9px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.item1 {
+    float: left;
+    margin-right:5px;
+    border: 2px solid pink;
+}
+.item2 {
+    display: inline-block;
+    border: 2px solid pink;
+}
+
+.item1 div, .item2 div {
+    margin-bottom:5px;
+}
+
+.board_list div.tit a:hover {
+    text-decoration: underline;
+}
