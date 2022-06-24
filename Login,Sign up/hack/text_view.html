@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>게시판 목록</title>
+        <meta http-equiv="Content-Type" content="text/html">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="board_list_wrap">
+            <div id="top_bar">
+                <img src="img/10.PNG" id="img_1">
+                <button id="search_fillter" type="button"><img src="img/11.png" id="img_2"></button>
+            </div>
+            <div id="bottom_bar"><img src="img/9.PNG"></div>
+            <!---
+            <div id="filltering">
+                <input  id="fillter_text" type="text">
+                <button id="btn_fillter" type="submit">검색</button>
+            </div>
+        -->
+            <div class="board_list">
+                <div class="col">
+                    <div class="item1">
+                        <div class="img_item"><img src="img/12.PNG"></div>
+                        <div class="tit"><a href="#">신선한 당근 팝니다</a></div>
+                        <div class="price">3000원</div>
+                        <div class="pos_time">남동구 논현1동 . 2분전</div>
+                    </div>
+                    <div class="item2">
+                        <div class="img_item"><img src="img/13.PNG"></div>
+                        <div class="tit"><a href="#">여분상추 대량으로 팝니다</a></div>
+                        <div class="price">6000원</div>
+                        <div class="pos_time">남동구 논현1동 . 2분전</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item1">
+                        <div class="img_item"><img src="img/12.PNG"></div>
+                        <div class="tit"><a href="#">신선한 당근 팝니다</a></div>
+                        <div class="price">3000원</div>
+                        <div class="pos_time">남동구 논현1동 . 2분전</div>
+                    </div>
+                    <div class="item2">
+                        <div class="img_item"><img src="img/13.PNG"></div>
+                        <div class="tit"><a href="#">여분상추 대량으로 팝니다</a></div>
+                        <div class="price">6000원</div>
+                        <div class="pos_time">남동구 논현1동 . 2분전</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item1">
+                        <div class="img_item"><img src="img/12.PNG"></div>
+                        <div class="tit"><a href="#">신선한 당근 팝니다</a></div>
+                        <div class="price">3000원</div>
+                        <div class="pos_time">남동구 논현1동 . 2분전</div>
+                    </div>
+                    <div class="item2">
+                        <div class="img_item"><img src="img/13.PNG"></div>
+                        <div class="tit"><a href="#">여분상추 대량으로 팝니다</a></div>
+                        <div class="price">6000원</div>
+                        <div class="pos_time">남동구 논현1동 . 2분전</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        document.querySelector("#btn_fillter").addEventListener("click", () => {
+            var value, name, item, i;
+
+            value=document.getElementById("fillter_text").value.toUpperCase();
+            item=document.getElementsByClassName("item");
+
+            for(i=0;i<item.length;i++){
+                name=item[i].getElementsByClassName("tit");
+                if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+                    item[i].style.display = "flex";
+                }else{
+                    item[i].style.display= "none";
+                }
+            }
+        });
+    </script>
+
+</html>
